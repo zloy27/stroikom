@@ -1,0 +1,84 @@
+.main-page {
+    padding-top: 100px;
+    background-image: url(/assets/icons/photo_2025-06-11_14-32-54.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // filter: blur(1px);
+    color: var(--neutral-color-10);
+    font-weight: 700;
+    height: 100vh;
+    z-index: -2;
+
+
+    &_shell {
+        @include flex-row;
+        justify-content: space-between;
+        height: 40vw
+    }
+
+
+    &_info {
+        @include flex-column;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 1;
+
+        &--text {
+            max-width: 600px
+        }
+    }
+
+
+
+    &_links {
+        @include flex-column;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 1;
+
+
+        &-ul {
+            @include flex-column;
+        }
+
+        &-button {
+            line-height: 36px;
+            color: var(--neutral-color-10);
+            padding: 0 24px;
+            border: solid #ffff;
+            background: '';
+            transition: 0.25s ;
+        }
+        &-button:hover{
+            color: var(--base-color-30);
+            border: var(--base-color-30);
+        }
+    }
+
+    &_li {
+        line-height: 36px;
+        color: var(--neutral-color-10);
+        font-weight: 700;
+        font-size: 20px;
+        transition: 0.25s linear;
+    }
+
+    &_li:hover {
+        color: var(--base-color-30);
+    }
+}
+
+.main-page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    background: #FFFF;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.66) 100%);
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, rgba(0, 0, 0, 0.66) 100%);
+    // background: rgba(0, 0, 0, 0.137);
+    /* Это затемнение. Его степень можно отрегулировать... */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
