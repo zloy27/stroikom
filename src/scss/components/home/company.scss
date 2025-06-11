@@ -1,0 +1,61 @@
+.company{
+    border-top-color:var(--neutral-color-150) ;
+    border-bottom-color:var(--neutral-color-150) ;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    &__shell{
+        margin: 22px 0  ;
+        padding: 64px 63px;
+        display: flex;
+        gap: 30px;
+        @include tablet{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__info{
+        
+        &-num{
+            line-height: 120%;
+            font-size: 56px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        &-text{
+            max-width: 323px;
+            line-height: 32px;
+            font-size: 18px;
+            color: var(--neutral-color-150);
+        }
+    }
+    &__logo{
+        width: 100%;
+        &-box{
+            background-color: #fff;
+            width: 160px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            border-radius: 16px;
+        }
+        &-top{
+            flex-wrap: wrap;
+            display: flex;
+            margin-bottom: 10px;
+            gap: 30px;
+            @include tablet{
+                justify-content: center;
+            }
+        }
+        &-bottom{
+            flex-wrap: wrap;
+            display: flex;
+            gap: 30px;
+            @include tablet{
+                justify-content: center;
+            }
+        }
+    }
+}

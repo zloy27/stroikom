@@ -1,0 +1,114 @@
+.insight {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: var(--neutral-color-60);
+    color: var(--neutral-color-10);
+    &__shell {
+        display: flex;
+        flex-direction: column;
+        @include small-desktop {
+            margin: 30px;
+        }
+        @include tablet {
+            margin: 20px;
+        }
+        @include mobile {
+            margin: 15px;
+        }
+    }
+    &__help {
+        justify-content: left;
+        max-width: 816px;
+        max-height: 306px;
+        
+        @include mobile {
+            max-height: 506px ;
+        }
+        &-tittle {
+            color: #fff;
+            line-height: 67px;
+            font-size: 56px;
+            @include small-desktop {
+                font-size: 48px;
+                line-height: 58px;
+            }
+            @include tablet {
+                font-size: 46px;
+            }
+            @include mobile {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
+        &-text {
+            line-height: 27px;
+            margin-top: 24px;
+            font-size: 18px;
+            color: var(--neutral-color-150);
+            max-width: 606px;
+            @include tablet {
+                line-height: normal;
+            }
+        }
+        
+    }
+    &__table {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        &-left,
+        &-right {
+            gap: 56px;
+            max-width: 453px;
+            max-height: 556px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include mobile {
+                max-height: max-content;
+            }
+            @include mobile {
+                gap: 35px;
+            }
+        }
+        &-left {
+            @include small-desktop {
+                margin-right: 10px;
+            }
+            @include mobile {
+                margin-bottom: 35px;
+            }
+        }
+
+        @include tablet {
+            padding: 10px;
+        }
+        @include small-tablet {
+            display: block;
+            flex-direction: column;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        gap: 24px;
+        &-icon {
+            height: 40px;
+            width: 40px;
+        }
+        &-tittle {
+            color:#fff;
+            font-size: 32px;
+            @include mobile {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        &-text {
+            color: var(--neutral-color-150);
+        }
+    }
+}
