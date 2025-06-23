@@ -1,4 +1,4 @@
-.header {
+.header-main {
 
     padding:  50px;
     background-color: var(--base-color-20);
@@ -6,8 +6,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    display: flex;
-    position: sticky;
+    display: none;
+    position: fixed;
     width: 100%;
     top: 0;
     animation: ani 0.5s forwards;
@@ -142,6 +142,10 @@
             color: var(--base-color-black);
             border: solid var(--base-color-black);
         }
+}
+//hover
+.burger_li:hover{
+    color: var(--base-color-black);
 }
 
 @keyframes burgerVisible{

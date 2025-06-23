@@ -3,10 +3,10 @@
 @import './globals';
 // components
 @import './components/home/main-page.scss';
-// @import './components/home/hero.scss';
-// @import './components/home/insight/insight.scss';
-// @import './components/home/features.scss';
-// @import './components/home/strenght.scss';
-// @import './components/home/company.scss';
-// @import './components/home/news.scss';
-// аналогично остальные страницы
+@import './components/home/home.scss';
+@import './components/home/header-main.scss';
+@import './components/home/companyInfo.scss';
+@import './components/home/veiwingHouses.scss';
+@import './components/home/social.scss';
+@import './components/footer.scss';
+

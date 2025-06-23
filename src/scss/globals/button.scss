@@ -1,4 +1,11 @@
 .button {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--base-color-white);
+    padding: 6px 24px;
+    border: solid var(--base-color-white);
+
     &-form {
         font-weight: 700;
         font-size: 16px;
@@ -6,12 +13,13 @@
         text-align: center;
         border-radius: 100px;
         transition: opacity var(--transition);
-        @include mobile{
+
+        @include mobile {
             font-size: 14px;
         }
     }
-    
-    &:hover{
+
+    &:hover {
         opacity: 0.9;
     }
 }

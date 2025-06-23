@@ -16,7 +16,7 @@ html {
     position: relative;
     overflow-x: hidden;
     color: var(--neutral-color-100);
-    background-color: var(--neutral-color-10);
+    background-color: var(--base-color-background);
 
 
 }
@@ -81,3 +81,7 @@ label {
     padding: 0 var(--container-padding);
     max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 }
+
+// .shell{
+    
+// }
