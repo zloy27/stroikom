@@ -1,0 +1,46 @@
+.layot{
+    &_shell{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &_title{
+        color: var(--base-color-white);
+        margin-bottom: 40px;
+        font-size: 26px;
+        font-weight: 700;
+    }
+    &_nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &_tab{
+        
+        background-color: var(--base-color-20);
+        color: var(--base-color-white);
+        width: 24.5%;
+        padding: 15px 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+    &_item{
+        max-width: 100%;
+        color: var(--base-color-black);
+        height: 150px;
+        background-color: var(--base-color-white);
+        border-radius: 0 0 10px 10px;
+        padding: 20px;
+    }
+    
+}
+.active_button{
+    background-color: var(--base-color-white);
+    color: var(--base-color-black);
+    
+};
+.active_button{
+    display: block
+};
+.layot_item:not(.active_item){
+    display: none;
+}

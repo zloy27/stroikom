@@ -1,6 +1,6 @@
 
-// появления/удаление хедера
-export const headerActiveded = () => {
+// появления/удаление  мэйн хедера
+export const headerMinActiveded = () => {
     var mainPageHeight = document.querySelector('.main-page');
     var header = document.querySelector('.header-main');
     var windowHeight = window.pageYOffset
@@ -18,9 +18,28 @@ export const headerActiveded = () => {
     )
 };
 
-//открытие бургера
-export const burgerOpened = () => {
+
+
+//открытие бургера на мэйне
+export const burgerMainOpened = () => {
     var burgerButton = document.querySelector('.header-main_burger')
+    var burgerClass = document.querySelector('.burger')
+    var burgerShadow = document.querySelector('.burger_shadow')
+    var bodyClass = document.querySelector('.body')
+
+
+    burgerButton.addEventListener('click', function burgerVisible() {
+        burgerClass.style.right = '0px'
+        burgerClass.style.display = 'flex'
+        burgerClass.style.animation = 'burgerVisible 0.5s forwards'
+        burgerShadow.style.display = 'block'
+        bodyClass.style.pointerEvents = 'none'
+        burgerClass.style.pointerEvents = 'all'
+
+    })
+};
+export const burgerOpened = () => {
+    var burgerButton = document.querySelector('.header_burger')
     var burgerClass = document.querySelector('.burger')
     var burgerShadow = document.querySelector('.burger_shadow')
     var bodyClass = document.querySelector('.body')

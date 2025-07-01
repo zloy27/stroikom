@@ -1,0 +1,41 @@
+.title{
+    color: var(--base-color-white);
+    margin: 70px 0;
+    &_shell{
+        @include flex-column-space-between;
+        gap: 60px;
+    }
+    &_base{
+        @include flex-row-space-between;
+        gap: 60px
+    }
+    &_img{
+        position: relative;
+        &--span{
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--base-color-white);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    }
+    &_img img{
+        max-width: 500px;
+        border: solid 2px var(--base-color-white);
+    }
+    &_info{
+        @include flex-column-space-between;
+        gap: 20px;
+        max-width: 700px;
+    }
+    &_title{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &_gallery{
+        @include flex-row-space-between;
+        gap: 60px;
+        max-height: 400px;
+    }
+}

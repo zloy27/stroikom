@@ -1,0 +1,11 @@
+@import './mixins';
+@import './base';
+@import './globals';
+// components
+@import './components/header.scss';
+@import './components/aframe/title.scss';
+@import './components/aframe/table.scss';
+@import './components/aframe/layot.scss';
+@import './components/aframe/accordion.scss';
+@import './components/aframe/swiper.scss';
+@import './components/footer.scss';

@@ -1,4 +1,4 @@
-import '/scss/budget.scss';
+import '/scss/middle.scss';
 
 // components
 

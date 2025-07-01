@@ -1,0 +1,21 @@
+.table{
+    color: var(--base-color-white);
+    margin-bottom: 70px;
+    &_shell{
+        @include flex-column-space-between;
+        gap: 50px;
+    }
+    &_title{
+        line-height: 36px;
+        font-size: 26px;
+        font-weight: 700;
+    }
+    &_table{
+        border-collapse: collapse;
+    }
+    &_td{
+        border: solid 1px var(--base-color-white);
+        padding: 20px;
+    }
+
+}

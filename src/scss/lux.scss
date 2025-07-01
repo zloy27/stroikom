@@ -1,0 +1,11 @@
+@import './mixins';
+@import './base';
+@import './globals';
+// components
+@import './components/header.scss';
+@import './components/lux/title.scss';
+@import './components/lux/table.scss';
+@import './components/lux/layot.scss';
+@import './components/lux/accordion.scss';
+@import './components/lux/swiper.scss';
+@import './components/footer.scss';

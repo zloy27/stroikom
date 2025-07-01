@@ -1,0 +1,54 @@
+.accordion{
+    margin-top: 70px;
+    &_shell{
+        @include flex-column;
+    }
+    &_heading{
+        color: var(--base-color-white);
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 26px
+        
+    }
+    &_body{
+        @include flex-column;
+        max-width: 70vw;
+        gap: 30px;
+    }
+    &_title{
+        @include flex-row-space-between;
+        background-color: var(--base-color-20);
+        font-size: 20px;
+        padding: 10px 20px;
+        border: solid 2px var(--base-color-white);
+    }
+    &_text{
+        color: var(--base-color-white);
+    }
+    &_button{
+        color: var(--base-color-black);
+        background-color: var(--base-color-white);
+        border-radius: 50%;
+        padding: 15px;
+        max-width: 30px;
+        max-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        
+    }
+    &_info{
+        color: var(--base-color-black);
+        background-color: var(--base-color-white);
+        padding: 10px 20px;
+        height: auto;
+    }
+}
+
+.active_info{
+    display: flex;
+}
+.accordion_info:not(.active_info){
+    display: none;
+}
