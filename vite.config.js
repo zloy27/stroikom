@@ -16,8 +16,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: './src/index.html',
-                pricing: './src/pricing.html',
-                contact: './src/contact.html',
+                budget: './src/budget.html',
+                middle: './src/middle.html',
+                lux: './src/lux.html',
+                aframe: './src/aframe.html',
             },
         },
     },
