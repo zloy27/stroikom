@@ -55,6 +55,24 @@ export const burgerOpened = () => {
 
     })
 };
+//открыте бургера при таблете
+export const burgerTabletOpened = () => {
+    var burgerButton = document.querySelector('.main-page_head-burger')
+    var burgerClass = document.querySelector('.burger')
+    var burgerShadow = document.querySelector('.burger_shadow')
+    var bodyClass = document.querySelector('.body')
+
+
+    burgerButton.addEventListener('click', function burgerVisible() {
+        burgerClass.style.right = '0px'
+        burgerClass.style.display = 'flex'
+        burgerClass.style.animation = 'burgerVisible 0.5s forwards'
+        burgerShadow.style.display = 'block'
+        bodyClass.style.pointerEvents = 'none'
+        burgerClass.style.pointerEvents = 'all'
+
+    })
+};
 //закрытие бургера 
 export const burgerCancel = () => {
     var burgerCancelButton = document.querySelector('.burger_cancel')

@@ -12,6 +12,22 @@
     }
     &_info{
         max-width: 300px;
+        @include small-tablet{
+            max-width: 200px;
+        }
+        &-logo{
+        max-width: 150px;
+        @include small-tablet{
+            max-width: 100px;
+        }
+        &-text{
+            @include small-tablet{
+                line-height: 1.5em;
+                font-size: 14px;
+            }
+        }
+    }
+
     }
     &_info,&_group{
         display: flex;
@@ -20,20 +36,26 @@
         justify-content: space-between;
         gap: 14px;
     }
-    &_info-logo{
-        max-width: 150px;
-    }
     &_group{
         max-height: 200px;
+
+        &-li{
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--base-color-white);
+        @include small-tablet{
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+    }
     }
     &_title,&_group-title{
         font-size: 18px;
         font-weight: 700;
-    }
-    &_group-li{
-        font-size: 18px;
-        font-weight: 400;
-        color: var(--base-color-white);
+        @include small-tablet{
+            font-size: 16px;
+            line-height: 1.5em;
+        }
     }
 }
 //hover 
