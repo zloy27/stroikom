@@ -5,6 +5,7 @@
     left: -150vw;
     border-radius: 10px;
     transition: 0.3s;
+    margin-right: 30px;
 
     &__shell {
         display: flex;
@@ -14,8 +15,33 @@
         padding: 20px;
         align-items: flex-start;
         z-index: 16;
+        min-width: 400px;
+        @include small-tablet{
+            min-width: 350px;
+        }
+        @include mobile{
+            min-width: 300px;
+        }
     }
-
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 150%;
+        color: var(--base-color-white);
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        align-items: flex-start;
+        z-index: 16;
+        overflow: hidden;
+    }
     &__name,
     &__text,
     &__tel {
@@ -23,7 +49,7 @@
         padding-left: 7px;
         line-height: 1.5em;
     }
-
+    &__name,
     &__tel {
         width: 60%;
     }
@@ -87,4 +113,16 @@
         bottom: 0;
         left: 0;
         z-index: 15;
+}
+.form__active{
+    left: 35vw;
+    @include small-tablet{
+        left: 25vw;
+    }
+    @include mobile{
+        left: 15vw;
+    }
+}
+.form:not(.form__active){
+    left: -150vw;
 }

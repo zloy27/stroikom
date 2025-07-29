@@ -3,7 +3,7 @@ import '/scss/main.scss';
 // components
 
 import { burgerCancel, headerMinActiveded, burgerTransition,burgerMainOpened,burgerTabletOpened } from './components/header.js';
-import {formVisible, formAnvisible, sendingForm} from './components/form.js';
+import {formVisible, formAnvisible, sendingForm,closeForm} from './components/form.js';
 burgerTabletOpened();
 headerMinActiveded();
 burgerMainOpened();
@@ -12,4 +12,5 @@ burgerTransition();
 formVisible();
 formAnvisible();
 sendingForm();
+closeForm();
 

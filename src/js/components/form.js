@@ -7,7 +7,7 @@ export function formVisible() {
     formButton.forEach(btn => {
         btn.addEventListener('click', () => {
             formItem.style.zIndex = '17';
-            formItem.style.left = '35vw';
+            formItem.classList.add('form__active');
             formItem.style.pointerEvents = 'auto';
             bodyClass.style.overflow = 'hidden'
             formShadow.style.display = 'block';
@@ -26,11 +26,24 @@ export function formAnvisible(){
         formButton.addEventListener('click', () => {
             bodyClass.style.overflow = 'auto'
             formItem.style.zIndex = '-1';
-            formItem.style.left = '-150vw';
+            formItem.classList.remove('form__active');
             formItem.style.pointerEvents = 'none';
             formShadow.style.display = 'none';
             burgerItem.style.pointerEvents = 'auto';
         })
+}
+export function closeForm(){
+    const formSubmit = document.querySelector(".form__submit");
+    const formName = document.querySelector("form__name");
+    const formPhone = document.querySelector("form__tel");
+    const formMessage = document.querySelector("form__text");
+    formSubmit.addEventListener('submit',()=>{
+        console.log
+        formAnvisible();
+        formName.textContent == "";
+        formPhone.textContent = "";
+        formMessage.textContent = "";
+    })
 }
 
 export function sendingForm(){
@@ -46,5 +59,6 @@ export function sendingForm(){
             }, function(error) {
                 alert('Failed to send email: ' + JSON.stringify(error));
             });
+
     });
 }

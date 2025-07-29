@@ -1,17 +1,19 @@
 <div class="form__shadow"></div>
 <section class="form">
-    <form id="form" class="form__shell">
+    <div  class="form__shell">
+        <div class="form__title"><span>Форма для связи</span></div>
         <button class="form__cancel">
             <img src="/assets/icons/cancel.svg" alt="" class="form__cancel-img">
         </button>
-        <input type="text" class="form__name" placeholder="Имя" name="name">
-        <input type="tel" class="form__tel" placeholder="телефон в формате +71234567890" name="phone">
-        <textarea class="form__text" placeholder="комментарий к заказу" name="message"></textarea>
-        <div class="form__cancel-shell">
-            <input type="submit" class="form__submit">
-        </div>
-    </form>
+        <form action="" id="form" class="form__form">
+            <input type="text" class="form__name" placeholder="Имя" name="name">
+            <input type="tel" class="form__tel" placeholder="номер телефона" name="phone">
+            <textarea class="form__text" placeholder="комментарий к заказу" name="message"></textarea>
+            <div class="form__cancel-shell">
+                <input type="submit" class="form__submit" id="form__submit">
+            </div>
+        </form>
+    </div>
 </section>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
