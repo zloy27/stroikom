@@ -8,6 +8,7 @@
     height: 100%;
     max-height: 1040px;
     position: relative;
+    background-position: center;
     @include small-tablet{
         max-height: 650px;
     }

@@ -1,7 +1,6 @@
 .form {
     position: fixed;
     background-color: var(--base-color-20);
-    z-index: 20;
     top: 40vh;
     left: -150vw;
     border-radius: 10px;
@@ -14,6 +13,7 @@
         width: 35vw;
         padding: 20px;
         align-items: flex-start;
+        z-index: 16;
     }
 
     &__name,
@@ -70,9 +70,21 @@
 
 
     }
-    &__submit:hover {
-            background-color: var(--base-color-black);
-            color: var(--base-color-white);
-        }
 
+    &__submit:hover {
+        background-color: var(--base-color-black);
+        color: var(--base-color-white);
+    }
+
+}
+
+.form__shadow {
+        display: none;
+        background-color:  rgba(0, 0, 0, 0.66);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
 }

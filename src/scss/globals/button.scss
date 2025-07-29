@@ -23,3 +23,11 @@
         opacity: 0.9;
     }
 }
+
+.button__phone {
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--base-color-white);
+    padding: 0 24px;
+    border: solid var(--base-color-white);
+}

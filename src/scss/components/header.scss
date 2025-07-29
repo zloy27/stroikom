@@ -1,6 +1,6 @@
 .header {
 
-    padding:  50px;
+    padding: 50px;
     background-color: var(--base-color-20);
     height: 100px;
     flex-direction: row;
@@ -78,9 +78,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    &_shadow{
+
+    &_shadow {
         display: none;
-        background-color:  rgba(0, 0, 0, 0.66);
+        background-color: rgba(0, 0, 0, 0.66);
         position: fixed;
         top: 0;
         right: 0;
@@ -89,7 +90,7 @@
         z-index: 10;
     }
 
-    &_cancel{
+    &_cancel {
         position: absolute;
         top: 10px;
         right: 10px;
@@ -125,7 +126,15 @@
         line-height: 30px;
         font-weight: 700;
         font-size: 18px;
+    }
 
+    &__bottom {
+        @include flex-column-space-between;
+        gap: 20px;
+    }
+
+    &__phone {
+        color: var(--base-color-white);
     }
 
     &_button {
@@ -138,26 +147,29 @@
         background: '';
         transition: 0.25s;
     }
+
     &_button:hover {
-            color: var(--base-color-black);
-            border: solid var(--base-color-black);
-        }
+        color: var(--base-color-black);
+        border: solid var(--base-color-black);
+    }
 }
 
-@keyframes burgerVisible{
-    0%{
+@keyframes burgerVisible {
+    0% {
         right: -300px;
     }
-    100%{
+
+    100% {
         right: 0px;
     }
 }
 
-@keyframes burgerDontVisible{
-    0%{
+@keyframes burgerDontVisible {
+    0% {
         right: 0px;
     }
-    100%{
+
+    100% {
         right: -300px;
     }
 }

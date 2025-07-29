@@ -1,5 +1,4 @@
 .header-main {
-
     padding:  50px;
     background-color: var(--base-color-20);
     height: 100px;
@@ -12,7 +11,6 @@
     top: 0;
     animation: ani 0.5s forwards;
     z-index: 2;
-
     &_logo img {
         max-height: 90px;
     }
@@ -28,6 +26,9 @@
         padding: 10px;
         border: solid 1px var(--base-color-white);
         max-height: 40px;
+        @include mobile{
+            display: none;
+        }
     }
 
     &_phone-a {
@@ -78,6 +79,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
+    //наложение тени при активации бурегра
     &_shadow{
         display: none;
         background-color:  rgba(0, 0, 0, 0.66);
@@ -102,7 +105,6 @@
         @include flex-column;
         justify-content: space-between;
         align-items: center;
-
     }
 
     &_top {
@@ -127,7 +129,13 @@
         font-size: 18px;
 
     }
-
+    &__bottom{
+        @include flex-column-space-between;
+        gap: 20px;
+    }
+    &__phone{
+        color: var(--base-color-white);
+    }
     &_button {
         font-size: 18px;
         font-weight: 700;
@@ -165,3 +173,5 @@
         right: -300px;
     }
 }
+
+//наложение тени при форме
