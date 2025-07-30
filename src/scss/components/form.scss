@@ -32,6 +32,9 @@
         font-weight: 700;
         line-height: 150%;
         color: var(--base-color-white);
+        @include mobile{
+            font-size: 18px;
+        }
     }
     &__form{
         display: flex;
@@ -48,6 +51,10 @@
         border-radius: 5px;
         padding-left: 7px;
         line-height: 1.5em;
+        @include mobile{
+            line-height: 1.7em;
+            font-size: 14px;
+        }
     }
     &__name,
     &__tel {
@@ -81,6 +88,9 @@
         line-height: 1.5em;
         color: var(--base-color-black);
         padding: 0 10px;
+        @include mobile{
+            font-size: 14px;
+        }
 
         &-shell {
             display: flex;
@@ -121,6 +131,9 @@
     }
     @include mobile{
         left: 15vw;
+    }
+    @include small-mobile{
+        left: 7vw;
     }
 }
 .form:not(.form__active){

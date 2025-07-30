@@ -8,6 +8,9 @@
         @include small-tablet{
             padding-bottom: 30px;
         }
+        @include mobile{
+            gap: 20px;
+        }
     }
     &_title{
         color: var(--base-color-white);
@@ -22,14 +25,13 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 40px;
         @include small-tablet{
             justify-content: center;
-            gap: 40px;
+
         }
         @include mobile{
             padding: 0 50px 0 50px;
-
         }
     }
     &_card{
@@ -43,11 +45,18 @@
         border: solid 1px var(--base-color-white) ;
         margin-bottom: 40px;
         @include mobile{
+            margin-bottom: 0px;
             max-height: 30%;
         }
         &--date{
             font-size: 14px;
             line-height: 120%;
+            @include mobile{
+                font-size: 12px;
+            }
+            @include small-mobile{
+                font-size: 10px;
+            }
         }
         &--info{
             display: flex;
@@ -60,6 +69,21 @@
             justify-content: center;
             font-size: 20px;
             font-weight: 700;
+            @include mobile{
+                font-size: 18px;
+            }
+            @include small-mobile{
+                font-size: 16px;
+            }
+        }
+        &--text{
+            font-size: 16px;
+            @include mobile{
+                font-size: 14px;
+            }
+            @include small-mobile{
+                font-size: 12px;
+            }
         }
         &--button{
             color: var(--base-color-white);
@@ -68,7 +92,10 @@
             align-items: center;
             border: solid 1px var(--base-color-white) ;
             padding: 6px 30px;
-            
+            @include small-mobile{
+                padding: 6px 24px;
+                font-size: 14px;
+            }
         }
     }
 

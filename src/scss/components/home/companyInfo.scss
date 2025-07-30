@@ -20,6 +20,9 @@
             font-size: 20px;
             line-height: 130%;
         }
+        @include small-mobile{
+            font-size: 18px;
+        }
     }
     &_info{
         font-size: 18px;
@@ -27,6 +30,9 @@
         max-width: 700px;
         @include mobile{
             font-size: 16px;
+        }
+        @include small-mobile{
+            font-size: 14px;
         }
     }
 }

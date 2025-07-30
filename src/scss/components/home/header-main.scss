@@ -103,7 +103,7 @@
     }
 
     @include small-mobile {
-        width: 150px;
+        width: 175px;
         padding: 20px 10px;
     }
 
@@ -207,7 +207,7 @@
         }
 
         @include small-mobile {
-            font-size: 10px;
+            font-size: 12px;
             padding: 0 12px;
         }
     }
@@ -221,15 +221,15 @@
         border: solid #ffff;
         background: '';
         transition: 0.25s;
-
+        text-wrap: nowrap;
         @include mobile {
-            line-height: 1.5em;
-            font-size: 13px;
+            line-height: 2em;
+            font-size: 14px;
             padding: 0 18px;
         }
 
         @include small-mobile {
-            font-size: 10px;
+            font-size: 13px;
             padding: 0 12px;
         }
     }

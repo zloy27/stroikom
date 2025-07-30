@@ -16,6 +16,13 @@
         color: var(--base-color-white);
         height: 70px;
         padding-bottom: 20px;
+        @include mobile{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @include small-mobile{
+            line-height: 28px;
+        }
     }
     &_top,
     &_bottom{
