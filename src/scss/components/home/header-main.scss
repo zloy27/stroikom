@@ -1,5 +1,5 @@
 .header-main {
-    padding:  50px;
+    padding: 50px;
     background-color: var(--base-color-20);
     height: 100px;
     flex-direction: row;
@@ -11,8 +11,20 @@
     top: 0;
     animation: ani 0.5s forwards;
     z-index: 2;
+
+    @include mobile {
+        padding: 15px 15px 10px 15px;
+        max-height: 85px;
+        height: auto;
+        overflow: hidden;
+    }
+
     &_logo img {
         max-height: 90px;
+
+        @include mobile {
+            max-height: 70px;
+        }
     }
 
     &_info {
@@ -26,7 +38,8 @@
         padding: 10px;
         border: solid 1px var(--base-color-white);
         max-height: 40px;
-        @include mobile{
+
+        @include mobile {
             display: none;
         }
     }
@@ -38,6 +51,10 @@
 
     &_burger img {
         max-height: 50px;
+
+        @include mobile {
+            max-height: 30px;
+        }
     }
 }
 
@@ -79,11 +96,21 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+
+    @include mobile {
+        width: 200px;
+        padding: 30px 20px;
+    }
+
+    @include small-mobile {
+        width: 150px;
+        padding: 20px 10px;
+    }
+
     //наложение тени при активации бурегра
-    &_shadow{
+    &_shadow {
         display: none;
-        background-color:  rgba(0, 0, 0, 0.66);
+        background-color: rgba(0, 0, 0, 0.66);
         position: fixed;
         top: 0;
         right: 0;
@@ -92,13 +119,22 @@
         z-index: 10;
     }
 
-    &_cancel{
+    &_cancel {
         position: absolute;
         top: 10px;
         right: 10px;
         max-width: 50px;
         max-height: 50px;
 
+        @include mobile {
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+        @include small-mobile {
+            max-width: 30px;
+            max-height: 30px;
+        }
     }
 
     &_shell {
@@ -114,12 +150,28 @@
     }
 
     &_logo img {
-        max-width: 150px
+        max-width: 150px;
+
+        @include mobile {
+            max-width: 100px;
+        }
+
+        @include small-mobile {
+            max-width: 70px;
+        }
     }
 
     &_ul {
         @include flex-column;
         gap: 10px;
+
+        @include mobile {
+            gap: 8px;
+        }
+
+        @include small-mobile {
+            gap: 6px;
+        }
     }
 
     &_li {
@@ -128,14 +180,38 @@
         font-weight: 700;
         font-size: 18px;
 
+        @include mobile {
+            line-height: 1.5em;
+            font-size: 16px;
+
+        }
+
+        @include small-mobile {
+            font-size: 14px;
+        }
+
     }
-    &__bottom{
+
+    &__bottom {
         @include flex-column-space-between;
         gap: 20px;
     }
-    &__phone{
+
+    &__phone {
         color: var(--base-color-white);
+
+        @include mobile {
+            line-height: 2em;
+            font-size: 12px;
+            padding: 0 18px;
+        }
+
+        @include small-mobile {
+            font-size: 10px;
+            padding: 0 12px;
+        }
     }
+
     &_button {
         font-size: 18px;
         font-weight: 700;
@@ -145,31 +221,46 @@
         border: solid #ffff;
         background: '';
         transition: 0.25s;
-    }
-    &_button:hover {
-            color: var(--base-color-black);
-            border: solid var(--base-color-black);
+
+        @include mobile {
+            line-height: 1.5em;
+            font-size: 13px;
+            padding: 0 18px;
         }
+
+        @include small-mobile {
+            font-size: 10px;
+            padding: 0 12px;
+        }
+    }
+
+    &_button:hover {
+        color: var(--base-color-black);
+        border: solid var(--base-color-black);
+    }
 }
+
 //hover
-.burger_li:hover{
+.burger_li:hover {
     color: var(--base-color-black);
 }
 
-@keyframes burgerVisible{
-    0%{
+@keyframes burgerVisible {
+    0% {
         right: -300px;
     }
-    100%{
+
+    100% {
         right: 0px;
     }
 }
 
-@keyframes burgerDontVisible{
-    0%{
+@keyframes burgerDontVisible {
+    0% {
         right: 0px;
     }
-    100%{
+
+    100% {
         right: -300px;
     }
 }

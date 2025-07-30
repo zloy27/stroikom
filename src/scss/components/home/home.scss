@@ -17,25 +17,29 @@
         height: 70px;
         padding-bottom: 20px;
     }
-    &_top{
+    &_top,
+    &_bottom{
         width: 100%;
         gap: 40px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+            padding: 0 50px 0 50px;
+        }
     }
     &_bottom{
         margin-top: 70px;
-        width: 100%;
-        gap: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
     }
     &_card{
         padding: 20px;
         border: solid 3px var(--base-color-white) ;
         max-width: 600px;
+        @include mobile{
+            padding: 10px;
+            max-height: 30%;
+        }
         &--img{
             max-width: 550px;
         }
@@ -47,6 +51,10 @@
             line-height: 36px;
             font-weight: 700;
             color: var(--base-color-white);
+            @include mobile{
+                font-size: 18px;
+                line-height: 130%;
+            }
         }
         &--info{
             padding-top: 15px;
@@ -54,6 +62,10 @@
             font-size: 20px;
             color: var(--base-color-white);
             max-width: 450px;
+            @include mobile{
+                font-size: 14px;
+                line-height: 130%;
+            }
         }
     }
 }

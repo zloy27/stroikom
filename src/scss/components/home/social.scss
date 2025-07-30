@@ -5,6 +5,9 @@
         justify-content: space-between;
         gap: 40px;
         padding-bottom: 50px;
+        @include small-tablet{
+            padding-bottom: 30px;
+        }
     }
     &_title{
         color: var(--base-color-white);
@@ -20,6 +23,14 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
+        @include small-tablet{
+            justify-content: center;
+            gap: 40px;
+        }
+        @include mobile{
+            padding: 0 50px 0 50px;
+
+        }
     }
     &_card{
         color: var(--base-color-white);
@@ -31,6 +42,9 @@
         max-width: 320px;
         border: solid 1px var(--base-color-white) ;
         margin-bottom: 40px;
+        @include mobile{
+            max-height: 30%;
+        }
         &--date{
             font-size: 14px;
             line-height: 120%;
