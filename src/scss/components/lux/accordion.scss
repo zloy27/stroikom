@@ -1,5 +1,14 @@
 .accordion{
     margin-top: 70px;
+    @include small-tablet{
+        margin-bottom: 40px;
+    }
+    @include mobile{
+        margin-bottom: 35px;
+    }
+    @include small-mobile{
+        margin-bottom: 30px;
+    }
     &_shell{
         @include flex-column;
     }
@@ -7,8 +16,16 @@
         color: var(--base-color-white);
         margin-bottom: 40px;
         font-weight: 700;
-        font-size: 26px
-        
+        font-size: 26px;
+        @include small-tablet{
+            font-size: 24px
+        }
+        @include mobile{
+            font-size: 20px
+        }
+        @include small-mobile{
+            font-size: 18px;
+        }
     }
     &_body{
         @include flex-column;
@@ -21,9 +38,24 @@
         font-size: 20px;
         padding: 10px 20px;
         border: solid 2px var(--base-color-white);
+        @include mobile{
+            padding: 8px 16px;
+        }
+        @include small-mobile{
+            padding: 6px 12px;
+        }
     }
     &_text{
         color: var(--base-color-white);
+        @include small-tablet{
+            font-size: 18px;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+        @include small-mobile{
+            font-size: 14px;
+        }
     }
     &_button{
         color: var(--base-color-black);
@@ -36,13 +68,32 @@
         align-items: center;
         justify-content: center;
         transition: 0.3s;
-        
+        @include mobile{
+            max-width: 25px;
+            max-height: 25px;
+            padding: 10px;
+        }
+        @include small-mobile{
+            max-width: 20px;
+            max-height: 20px;
+            padding: 5px;
+        }
     }
     &_info{
         color: var(--base-color-black);
         background-color: var(--base-color-white);
         padding: 10px 20px;
         height: auto;
+        @include small-tablet{
+            font-size: 16px;
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+        @include small-mobile{
+            font-size: 12px;
+        }
+        
     }
 }
 

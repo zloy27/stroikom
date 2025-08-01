@@ -1,41 +1,94 @@
-.title{
+.title {
     color: var(--base-color-white);
     margin: 70px 0;
-    &_shell{
+
+    &_shell {
         @include flex-column-space-between;
         gap: 60px;
+        align-items: center;
     }
-    &_base{
+
+    &_base {
         @include flex-row-space-between;
-        gap: 60px
+        gap: 60px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-    &_img{
+
+    &_img {
         position: relative;
-        &--span{
+        width: 70vw;
+
+        &--span {
             font-size: 20px;
             font-weight: 700;
             color: var(--base-color-white);
             position: absolute;
             top: 20px;
             left: 20px;
+            @include mobile{
+                font-size: 16px;
+            }
         }
     }
-    &_img img{
+
+    &_img img {
         max-width: 500px;
         border: solid 2px var(--base-color-white);
+
+        @include mini-desktop {
+            max-width: 480px
+        }
+
+        @include tablet {
+            max-width: 700px;
+            width: 70vw;
+
+        }
     }
-    &_info{
+
+    &_info {
+        padding: 0 50px;
         @include flex-column-space-between;
         gap: 20px;
         max-width: 700px;
+
+        @include small-tablet {
+            padding: 0 40px;
+        }
     }
-    &_title{
+
+    &_title {
         font-size: 20px;
         font-weight: 700;
+        @include small-tablet{
+            font-size: 18px;
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+        @include small-mobile{
+            font-size: 12px;
+        }
     }
-    &_gallery{
-        @include flex-row-space-between;
-        gap: 60px;
-        max-height: 400px;
+
+    &_p {
+        font-size: 18px;
+
+        @include mini-desktop {
+            font-size: 15px;
+        }
+        @include small-tablet{
+            font-size: 14px;
+        }
+        @include mobile{
+            font-size: 12px;
+        }
+        @include small-mobile{
+            font-size: 10px;
+        }
     }
 }

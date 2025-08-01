@@ -1,6 +1,6 @@
 .slider{
-    width: 70vw;
-    height: 70vh;
+    width: 72vw;
+    height: 48vw;
     position: relative;
     overflow: hidden;
     margin-bottom: 70px;
@@ -45,4 +45,10 @@
     opacity: 1;
     background-color: var(--base-color-white);
     border-radius: 50%;
+    @include mobile{
+        height: 25px;
+    }
+    @include small-mobile{
+        height: 20px;
+    }
 }

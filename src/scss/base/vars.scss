@@ -54,6 +54,9 @@
     @include mobile {
         --container-width: 480px;
     }
+    @include small-mobile{
+        --container-width: 310px;
+    }
 
     // transition
     --transition: 0.2s ease-in-out;

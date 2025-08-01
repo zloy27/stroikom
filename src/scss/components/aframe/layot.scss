@@ -9,6 +9,15 @@
         margin-bottom: 40px;
         font-size: 26px;
         font-weight: 700;
+        @include small-tablet{
+            font-size: 24px;
+        }
+        @include mobile{
+            font-size: 20px;
+        }
+        @include small-mobile{
+            font-size: 18px;
+        }
     }
     &_nav{
         display: flex;
@@ -22,6 +31,15 @@
         width: 24.5%;
         padding: 15px 0;
         border-radius: 10px 10px 0 0 ;
+        @include small-tablet{
+            font-size: 16px;
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+        @include small-mobile{
+            font-size: 12px;
+        }
     }
     &_item{
         max-width: 100%;
@@ -30,6 +48,12 @@
         background-color: var(--base-color-white);
         border-radius: 0 0 10px 10px;
         padding: 20px;
+        @include mobile{
+            font-size: 14px;
+        }
+        @include small-mobile{
+            font-size: 12px;
+        }
     }
     
 }
