@@ -20,6 +20,7 @@ export default defineConfig({
                 middle: './src/middle.html',
                 lux: './src/lux.html',
                 aframe: './src/aframe.html',
+                about:'./src/about.html'
             },
         },
     },
