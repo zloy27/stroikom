@@ -3,20 +3,34 @@
     margin-bottom: 50px;
     color: var(--base-color-white);
     border-top: solid 1px var(--base-color-white);
-    @include small-tablet{
+
+    @include small-tablet {
         padding: 0 50px 0 50px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 50px;
+        margin-bottom: 40px;
     }
-    @include mobile{
-                padding: 0 20px 0 20px;
+
+    @include mobile {
+        padding: 0 20px 0 20px;
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
+
     &_shell {
         margin: 70px 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 40;
+        gap: 20px;
+        @include small-tablet{
+            margin: 50px 0;
+        }
+        @include mobile{
+            margin: 40px 0;
+        }
+        @include small-mobile{
+            margin: 30px 0;
+        }
 
         @include small-tablet {
             flex-direction: column;
@@ -25,12 +39,15 @@
     }
 
     &__groups {
+        width: 100%;
         @include flex-row-space-between;
         gap: 40px;
-        @include small-tablet{
+
+        @include small-tablet {
             gap: 20px;
         }
-        @include mobile{
+
+        @include mobile {
             gap: 16px;
         }
     }
@@ -54,17 +71,20 @@
             @include small-tablet {
                 max-width: 100px;
             }
-            @include small-mobile{
+
+            @include small-mobile {
                 max-width: 75px;
             }
 
         }
+
         &-text {
             @include small-tablet {
                 line-height: 1.5em;
                 font-size: 14px;
             }
-            @include small-mobile{
+
+            @include small-mobile {
                 font-size: 12px;
             }
         }
@@ -72,13 +92,14 @@
 
 
     &_group {
-                display: flex;
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 14px;
         max-height: 200px;
-        @include small-tablet{
+
+        @include small-tablet {
             gap: 6px;
         }
 
@@ -91,7 +112,8 @@
                 font-size: 16px;
                 line-height: 1.5em;
             }
-            @include mobile{
+
+            @include mobile {
                 font-size: 12px;
             }
         }
@@ -101,12 +123,13 @@
     &_group-title {
         font-size: 18px;
         font-weight: 700;
-        
+
         @include small-tablet {
             font-size: 16px;
             line-height: 1.5em;
         }
-        @include mobile{
+
+        @include mobile {
             font-size: 13px;
         }
     }

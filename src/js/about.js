@@ -1,18 +1,16 @@
-import '/scss/middle.scss';
+import '/scss/about.scss';
 
 // components
 
 import { burgerCancel, burgerTransition,burgerOpened } from './components/header.js';
-import { swiper } from './components/swiper.js';
-import { tabs } from './components/tabs.js';
-import {accordionShow} from './components/accordion.js';
+import {tabsAbout} from './components/about/tabs';
+import { tabsInfoSwiper} from './components/about/swiper';
 import {formVisible, formAnvisible, sendingForm,closeForm} from './components/form.js';
-swiper();
-accordionShow();
-tabs();
-burgerOpened();
 burgerCancel();
 burgerTransition();
+burgerOpened();
+tabsInfoSwiper()
+tabsAbout();
 formVisible();
 formAnvisible();
 sendingForm();

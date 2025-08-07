@@ -1,0 +1,85 @@
+.heading {
+    padding-top: 65px;
+    padding-bottom: 64px;
+    @include small-mobile{
+        padding: 48px 0 48px 0;
+    }
+    &__shell {
+        @include flex-column-space-between;
+        max-height: 370px;
+        height: 100%;
+        gap: 30px;
+    }
+
+    &__title {
+        color: var(--base-color-white);
+        font-size: 72px;
+        line-height: 120%;
+        font-weight: 700px;
+        @include tablet{
+            font-size: 56px;
+        }
+        @include small-tablet{
+            font-size: 40px
+        }
+        @include mobile{
+            font-size: 30px;
+        }
+        @include small-mobile{
+            font-size: 20px
+        }
+    }
+
+    &__info {
+        @include flex-row;
+        max-width: 850px;
+        gap: 24px;
+        @include small-tablet{
+            max-width: 480px;
+        }
+        @include mobile{
+            max-width: 340px;
+        }
+        @include small-mobile{
+            max-width: 300px;
+        }
+    }
+
+    &__line {
+        border: solid 1px (var(--base-color-white));
+        max-height: 1px;
+        max-width: 72px;
+        width: 100%;
+        @include small-tablet{
+            max-width: 48px;
+        }
+        @include mobile{
+            max-width: 30px;
+        }
+        @include small-mobile{
+            max-width: 20px;
+        }
+    }
+
+    &__text {
+        color: var(--base-color-white);
+        max-width: 724px;
+        font-size: 32px;
+        line-height: 42px;
+        
+        @include tablet{
+            font-size: 24px;
+            line-height: 133%;
+            max-width: 600px;
+        }
+        @include small-tablet{
+            font-size: 19px;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+        @include small-tablet{
+            font-size: 14px;
+        }
+    }
+}
